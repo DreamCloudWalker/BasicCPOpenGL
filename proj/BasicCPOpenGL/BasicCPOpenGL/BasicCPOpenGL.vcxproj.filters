@@ -24,9 +24,15 @@
     <ClCompile Include="..\..\..\lib\engine\src\platform\win32\WinMain.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\lib\engine\src\control\LogicController.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\lib\engine\include\EGLConfig.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\engine\src\control\LogicController.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

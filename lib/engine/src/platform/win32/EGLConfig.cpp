@@ -33,8 +33,6 @@ namespace _opengl_lib
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);   // 初始化屏幕背景色
 		glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT); // 取代OpenGL ES1.x的glClearDepth(1.0f);设置深度缓存
 
-
-
 		return true;
 	}
 

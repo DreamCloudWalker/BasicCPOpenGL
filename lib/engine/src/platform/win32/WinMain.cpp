@@ -1,4 +1,7 @@
 #include "../../../include/EGLConfig.h"
+#include "../../control/LogicController.h"
+
+using namespace _opengl_lib;
 
 // Function prototypes    
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
@@ -32,11 +35,13 @@ int main()
 	// Set this to true so GLEW knows to use a modern approach to retrieving function pointers and extensions    
 	glewExperimental = GL_TRUE;
 	// Initialize GLEW to setup the OpenGL Function pointers    
-	if (glewInit() != GLEW_OK)
+	if (!EglConfig::GLInit())
 	{
 		// std::cout << "Failed to initialize GLEW" << std::endl;
 		return -1;
 	}
+	EglConfig::SetRender((RenderFunc)LogicController::GLRenderThread);
+	EglConfig::GLResume();
 
 	// Define the viewport dimensions    
 	glViewport(0, 0, WIDTH, HEIGHT);
@@ -47,10 +52,7 @@ int main()
 		// Check if any events have been activiated (key pressed, mouse moved etc.) and call corresponding response functions    
 		glfwPollEvents();
 
-		// Render    
-		// Clear the colorbuffer    
-		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+		
 
 		// Swap the screen buffers    
 		glfwSwapBuffers(window);

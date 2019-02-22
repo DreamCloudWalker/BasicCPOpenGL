@@ -119,11 +119,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\lib\engine\src\control\LogicController.cpp" />
     <ClCompile Include="..\..\..\lib\engine\src\platform\win32\EGLConfig.cpp" />
     <ClCompile Include="..\..\..\lib\engine\src\platform\win32\WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\lib\engine\include\EGLConfig.h" />
+    <ClInclude Include="..\..\..\lib\engine\src\control\LogicController.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
