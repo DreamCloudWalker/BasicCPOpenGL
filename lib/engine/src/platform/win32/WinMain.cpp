@@ -35,13 +35,13 @@ int main()
 	// Set this to true so GLEW knows to use a modern approach to retrieving function pointers and extensions    
 	glewExperimental = GL_TRUE;
 	// Initialize GLEW to setup the OpenGL Function pointers    
-	if (!EglConfig::GLInit())
+	if (!EglConfig::init())
 	{
 		// std::cout << "Failed to initialize GLEW" << std::endl;
 		return -1;
 	}
-	EglConfig::SetRender((RenderFunc)LogicController::GLRenderThread);
-	EglConfig::GLResume();
+	EglConfig::setRender((RenderFunc)LogicController::renderThread);
+	EglConfig::onResume();
 
 	// Define the viewport dimensions    
 	glViewport(0, 0, WIDTH, HEIGHT);
@@ -52,7 +52,7 @@ int main()
 		// Check if any events have been activiated (key pressed, mouse moved etc.) and call corresponding response functions    
 		glfwPollEvents();
 
-		
+		EglConfig::draw();
 
 		// Swap the screen buffers    
 		glfwSwapBuffers(window);

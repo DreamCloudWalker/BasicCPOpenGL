@@ -23,7 +23,7 @@ namespace _opengl_lib
 		
 	}
 
-	LogicController* LogicController::GetInstance()
+	LogicController* LogicController::getInstance()
 	{
 		if (NULL == m_instance)
 		{
@@ -33,7 +33,7 @@ namespace _opengl_lib
 		return m_instance;
 	}
 
-	unsigned long LogicController::Release()
+	unsigned long LogicController::release()
 	{
 		delete m_instance;
 		m_instance = NULL;
@@ -42,20 +42,20 @@ namespace _opengl_lib
 	}
 
 	// init res path
-	bool LogicController::Init(string resPath, float dpiScale)
+	bool LogicController::init(string resPath, float dpiScale)
 	{
 		//LogUtilI("NativeDraw LogicController::Init resPath = %s", resPath);
 		return false;
 	}
 
 	// init res path
-	bool LogicController::Init(char *resPath, float dpiScale)
+	bool LogicController::init(char *resPath, float dpiScale)
 	{
 		return false;
 	}
 
 	// Win32 used by WinMain OpenGLInit::SetRender, android/ios used by LogicCallProxy
-	void LogicController::GLRenderThread()
+	void LogicController::renderThread()
 	{
 		if (NULL == m_instance)
 		{

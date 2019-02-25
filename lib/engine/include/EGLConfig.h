@@ -87,12 +87,12 @@ namespace _opengl_lib
 		EglConfig();
 		virtual ~EglConfig();
 	public:
-		static bool GLInit();
-		static void SetRender(RenderFunc pCallBackFunc);
-		static void GLDraw();
-		static void GLResize(int width, int height);
-		static void GLPause();
-		static void GLResume();
+		static bool init();
+		static void setRender(RenderFunc pCallBackFunc);
+		static void draw();
+		static void resize(int width, int height);
+		static void onPause();
+		static void onResume();
 	private:
 		static RenderFunc m_pCallBackFunc;
 	public:

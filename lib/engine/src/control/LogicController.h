@@ -27,11 +27,11 @@ namespace _opengl_lib
 		LogicController();
 		virtual ~LogicController();
 	public:
-		static void                 GLRenderThread();
-		static LogicController*     GetInstance();// get singleton object
-		unsigned long               Release();
-		bool                        Init(char *resPath, float dpiScale = 1.0f);
-		bool                        Init(string resPath, float dpiScale = 1.0f);
+		static void                 renderThread();
+		static LogicController*     getInstance();// get singleton object
+		unsigned long               release();
+		bool                        init(char *resPath, float dpiScale = 1.0f);
+		bool                        init(string resPath, float dpiScale = 1.0f);
 	private:
 		static LogicController*     m_instance;  // singleton object
 	public:

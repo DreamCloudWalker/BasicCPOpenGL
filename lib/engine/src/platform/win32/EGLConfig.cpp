@@ -18,7 +18,7 @@ namespace _opengl_lib
 		m_bPause = false;
 	}
 
-	bool EglConfig::GLInit()
+	bool EglConfig::init()
 	{
 		GLenum err = glewInit();
 		if (GLEW_OK != err)
@@ -36,12 +36,12 @@ namespace _opengl_lib
 		return true;
 	}
 
-	void EglConfig::SetRender(RenderFunc pCallBackFunc)
+	void EglConfig::setRender(RenderFunc pCallBackFunc)
 	{
 		m_pCallBackFunc = pCallBackFunc;
 	}
 
-	void EglConfig::GLDraw()
+	void EglConfig::draw()
 	{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);// Ë¢ÐÂ±³¾°
 #ifndef __OPENGL_ES_2__ // opengl es 1.x
@@ -51,7 +51,7 @@ namespace _opengl_lib
 			m_pCallBackFunc();
 	}
 
-	void EglConfig::GLResize(int width, int height)
+	void EglConfig::resize(int width, int height)
 	{
 		if (width == 0 || height == 0)
 			return;
@@ -73,12 +73,12 @@ namespace _opengl_lib
 #endif  // __OPENGL_ES_2__
 	}
 
-	void EglConfig::GLPause()
+	void EglConfig::onPause()
 	{
 		m_bPause = true;
 	}
 
-	void EglConfig::GLResume()
+	void EglConfig::onResume()
 	{
 		m_bPause = false;
 	}
