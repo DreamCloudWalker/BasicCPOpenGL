@@ -1,4 +1,4 @@
-﻿# Built application files
+# Built application files
 *.apk
 *.ap_
 
@@ -12,6 +12,7 @@
 bin/
 gen/
 out/
+.vscode/
 
 # Gradle files
 .gradle/
