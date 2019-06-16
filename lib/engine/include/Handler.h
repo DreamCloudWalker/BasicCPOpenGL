@@ -27,6 +27,7 @@ public:
  
 	void removeMessages(int what);
 
+    void enqueueMessage(Message& msg);
     virtual void handleMessage(Message& msg);
 	void dispatchMessage(Message& msg);
 }; 

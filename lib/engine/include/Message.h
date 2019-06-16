@@ -15,6 +15,7 @@ public:
     Message();
     virtual ~Message();
 
+private:
     
 }; 
 

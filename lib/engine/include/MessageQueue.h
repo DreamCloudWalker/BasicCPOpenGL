@@ -10,12 +10,15 @@
 #ifndef __MESSAGE_QUEUE_H__
 #define __MESSAGE_QUEUE_H__
 
+#include "Message.h"
+
 class MessageQueue {
 public:
     MessageQueue();
     virtual ~MessageQueue();
 
-    
+    void enqueueMessage(Message& msg);
+    Message next();
 }; 
 
 #endif

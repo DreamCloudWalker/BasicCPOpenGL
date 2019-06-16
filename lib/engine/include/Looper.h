@@ -14,7 +14,9 @@ class Looper {
 public:
     Looper();
     virtual ~Looper();
-
+    void prepare();
+    void loop();
+    Looper myLooper();
     
 }; 
 
