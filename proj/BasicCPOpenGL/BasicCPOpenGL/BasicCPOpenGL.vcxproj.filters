@@ -27,12 +27,33 @@
     <ClCompile Include="..\..\..\lib\engine\src\control\LogicController.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\lib\engine\src\handler\Handler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\engine\include\MessageQueue.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\lib\engine\include\Looper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\lib\engine\include\EGLConfig.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\lib\engine\src\control\LogicController.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\engine\include\Handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\engine\include\Looper.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\engine\include\Message.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\lib\engine\include\MessageQueue.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

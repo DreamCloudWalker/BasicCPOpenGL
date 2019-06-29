@@ -10,6 +10,8 @@
 #ifndef __MESSAGE_QUEUE_H__
 #define __MESSAGE_QUEUE_H__
 
+#include <chrono>
+
 #include "Message.h"
 
 class MessageQueue {
@@ -18,7 +20,7 @@ public:
     virtual ~MessageQueue();
 
     void enqueueMessage(Message& msg);
-    Message next();
+    Message* next();
 }; 
 
 #endif

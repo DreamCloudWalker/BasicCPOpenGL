@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -119,12 +119,19 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\lib\engine\include\Looper.cpp" />
+    <ClCompile Include="..\..\..\lib\engine\include\MessageQueue.cpp" />
     <ClCompile Include="..\..\..\lib\engine\src\control\LogicController.cpp" />
+    <ClCompile Include="..\..\..\lib\engine\src\handler\Handler.cpp" />
     <ClCompile Include="..\..\..\lib\engine\src\platform\win32\EGLConfig.cpp" />
     <ClCompile Include="..\..\..\lib\engine\src\platform\win32\WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\lib\engine\include\EGLConfig.h" />
+    <ClInclude Include="..\..\..\lib\engine\include\Handler.h" />
+    <ClInclude Include="..\..\..\lib\engine\include\Looper.h" />
+    <ClInclude Include="..\..\..\lib\engine\include\Message.h" />
+    <ClInclude Include="..\..\..\lib\engine\include\MessageQueue.h" />
     <ClInclude Include="..\..\..\lib\engine\src\control\LogicController.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

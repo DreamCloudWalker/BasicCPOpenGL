@@ -10,14 +10,20 @@
 #ifndef __LOOPER_H__
 #define __LOOPER_H__
 
+#include <chrono>
+
+#include "MessageQueue.h"
+
 class Looper {
 public:
     Looper();
     virtual ~Looper();
-    void prepare();
-    void loop();
-    Looper myLooper();
-    
+	static void prepare();
+    static void loop();
+	static Looper* myLooper();
+private:
+	static thread_local Looper* s_looper;
+	MessageQueue* m_messageQueue;
 }; 
 
 #endif
